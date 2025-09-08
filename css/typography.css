@@ -22,15 +22,29 @@ body {
   font-weight: 700;
 }
 
-.subheader-text {
-  font-size: 20px;
+.subheader-text-about-me {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
   font-weight: 700;
+  color: #2E7D32; /* forest green heading */
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.about-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .body-text {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333; /* dark text for readability */
+  text-align: justify;
 }
+
 
 .project-card-text {
   overflow: hidden;

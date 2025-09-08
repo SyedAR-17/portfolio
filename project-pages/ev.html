@@ -1,67 +1,101 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../assets/images/4.1.png" />
+  <title>Contour & Code | Syed Peerzada</title>
+  <meta name="description" content="A GIS portfolio made by Syed Peerzada.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-     <link rel="icon" href="../assets/images/4.1.png" />
-     <title>My GIS Journey</title>
-    <meta name="description" content="A GIS portfolio made by Syed Peerzada.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/utilities.css">
 
-		<link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/utilities.css">
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
 
-		<script defer src="../js/script.js"></script>
-	</head>
-	<body>
-    <!-- NAVBAR -->
-    <div  class="navbar fixed-navbar">
-      <a class="nav-title-link" href="../index.html">
-        <span class="nav-title">Contour & Code | Syed Peerzada</span>
+  <!-- NAVBAR -->
+  <div class="navbar fixed-navbar">
+    <a class="nav-title-link" href="../index.html">
+      <span class="nav-title">Contour & Code | Syed Peerzada</span>
+    </a>
+    <a class="button" href="#site-footer">
+      <span class="button-text">Contact Me</span>
+      <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon">
+    </a>
+  </div>
 
-        <a class="button" href="mailto:syednova7@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
+  <!-- MAIN PAGE CONTENT -->
+  <div id="main-content">
 
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-
-      <!-- PROJECT HEADER -->
-      <div id="project-header">
-        <div class="main-title">Revolutionizing EV Charging Infrastructure</div>
-        <div class="body-text">An Integrated IoT, GIS, and Mobility-Based Solution for Urban E-Mobility</div>
-
-        <!-- Image Grid -->
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem;">
-          <img class="project-header-image" src="../assets/images/4.1.png" style="width: 45%; height: auto;">
-          <img class="project-header-image" src="../assets/images/4.2.png" style="width: 45%; height: auto;">
-
-          <img class="project-header-image" src="../assets/images/4.3.png" style="width: 45%; height: auto;">
-          <img class="project-header-image" src="../assets/images/4.4.png" style="width: 45%; height: auto;">
-
-          <img class="project-header-image" src="../assets/images/4.5.png" style="width: 45%; height: auto;">
-          <img class="project-header-image" src="../assets/images/4.6.png" style="width: 45%; height: auto;">
-        </div>
-      </div>
-      <div id="project-details">
-        <div class="subheader-text">EV Charging Stations Site Suitability Analysis</div>
-        <div class="project-details-content">
-          <div class="body-text" style="text-align: justify;">This multi-phase project aimed to transform the EV charging ecosystem by developing a scalable, data-driven solution tailored for electric two-wheelers. Combining IoT, mobile technology, and geospatial analysis, the project tackled the key challenges of battery management, user accessibility, and infrastructure planning.</div>
-          <div class="body-text" style="text-align: justify;">To ensure efficient and accessible EV charging infrastructure, a site suitability analysis was conducted using Geographic Information System (GIS) techniques. The analysis focused on identifying optimal locations for EV charging stations in Islamabad by evaluating multiple spatial and non-spatial factors. Key criteria included proximity to major roads, 
-            population density, existing power grid infrastructure, commercial activity zones, and public transport hubs. Each factor was weighted using the Analytical Hierarchy Process (AHP) to reflect its importance in supporting EV adoption.</div>
+    <!-- Project Header Card -->
+    <div class="project-card" style="max-width: 100%; margin: 140px 40px 40px 40px;">
+      <div class="project-card-text-container" style="text-align: center;">
+        <div class="subheader-text project-title">Revolutionizing EV Charging Infrastructure</div>
+        <div class="body-text project-card-text">
+          An Integrated IoT, GIS, and Mobility-Based Solution for Urban E-Mobility
         </div>
       </div>
 
-    <!-- FOOTER -->
-    <div id="footer">
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/syedab17/">
-        <image src="../assets/icons/linkedin.png" class="footer-icon"/>
-      </a>
+      <!-- Image Grid inside card -->
+      <div class="project-image-grid" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; padding: 20px;">
+        <img src="../assets/images/4.1.png" class="project-image" style="max-width: 45%; border-radius: 12px;">
+        <img src="../assets/images/4.2.png" class="project-image" style="max-width: 45%; border-radius: 12px;">
+        <img src="../assets/images/4.3.png" class="project-image" style="max-width: 45%; border-radius: 12px;">
+        <img src="../assets/images/4.4.png" class="project-image" style="max-width: 45%; border-radius: 12px;">
+        <img src="../assets/images/4.5.png" class="project-image" style="max-width: 45%; border-radius: 12px;">
+        <img src="../assets/images/4.6.png" class="project-image" style="max-width: 45%; border-radius: 12px;">
+      </div>
     </div>
-	</body>
+
+    <!-- Project Details Card -->
+    <div class="project-card" style="max-width: 100%; margin: 40px 40px 40px 40px;">
+      <div class="project-card-text-container">
+        <div class="subheader-text project-title">Project Details</div>
+        <div class="body-text project-card-text" style="text-align: justify;">
+          This multi-phase project aimed to transform the EV charging ecosystem by developing a scalable, data-driven solution tailored for electric two-wheelers. Combining IoT, mobile technology, and geospatial analysis, the project tackled the key challenges of battery management, user accessibility, and infrastructure planning.
+        </div>
+        <div class="body-text project-card-text" style="text-align: justify;">
+          To ensure efficient and accessible EV charging infrastructure, a site suitability analysis was conducted using Geographic Information System (GIS) techniques. The analysis focused on identifying optimal locations for EV charging stations in Islamabad by evaluating multiple spatial and non-spatial factors. Key criteria included proximity to major roads, population density, existing power grid infrastructure, commercial activity zones, and public transport hubs. Each factor was weighted using the Analytical Hierarchy Process (AHP) to reflect its importance in supporting EV adoption.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="footer-container">
+
+      <!-- Left: Brand -->
+      <div class="footer-brand">
+        <h2>Contour & Code</h2>
+        <p class="footer-tagline">Mapping insights from Earth data</p>
+      </div>
+
+      <!-- Right: Contact -->
+      <div class="footer-contact">
+        <h2>CONTACT</h2>
+        <p><a href="mailto:syednova7@gmail.com">Email: syednova7@gmail.com</a></p>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/syedab17/" target="_blank">
+            <img src="../assets/icons/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="footer-bottom">
+      <p>© 2025 Syed Peerzada | Mapping the world, one insight at a time.</p>
+    </div>
+  </footer>
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+</body>
 </html>

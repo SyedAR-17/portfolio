@@ -1,54 +1,111 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-     <link rel="icon" href="../assets/images/3.1.png" />
-     <title>Danaee's Portfolio</title>
+    <link rel="icon" href="../assets/images/3.1.png" />
+    <title>Contour & Code | Syed Peerzada</title>
     <meta name="description" content="A GIS portfolio made by Syed Peerzada.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
 
-		<script defer src="../js/script.js"></script>
-	</head>
-	<body>
+    <script defer src="../js/script.js"></script>
+
+    <style>
+      .project-image {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        border-radius: 12px;
+      }
+
+      .project-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(46, 125, 50, 0.3);
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- NAVBAR -->
-    <div  class="navbar fixed-navbar">
+    <div class="navbar fixed-navbar">
       <a class="nav-title-link" href="../index.html">
         <span class="nav-title">Contour & Code | Syed Peerzada</span>
-        <a class="button" href="mailto:syednova7@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
+      </a>
+      <a class="button" href="#site-footer">
+        <span class="button-text">Contact Me</span>
+        <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon">
       </a>
     </div>
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
 
-      <!-- PROJECT HEADER -->
-      <div id="project-header">
-        <div class="main-title">Mobility Hotspots in Helsinki.</div>
-        <div class="body-text">Visualizing the Most Visited Places Using Mobility Data.</div>
-        <image class="project-header-image" src="../assets/images/3.1.png">
-        <image class="project-header-image" src="../assets/images/3.2.png"></image>
-      </div>
+      <!-- Project Header Card -->
+      <div class="project-card" style="max-width: 100%; margin: 140px 40px 40px 40px;">
+        <div class="project-card-text-container" style="text-align: center;">
+          <div class="subheader-text project-title">Mobility Hotspots in Helsinki</div>
+          <div class="body-text project-card-text">
+            Visualizing the Most Visited Places Using Mobility Data
+          </div>
+        </div>
 
-      <div id="project-details">
-        <div class="subheader-text">Project Details</div>
-        <div class="project-details-content">
-          <div class="body-text" style="text-align: justify;">This project leverages mobility data to identify and visualize the most frequently visited locations in Helsinki. By analyzing spatial patterns of human movement, the application helps uncover urban activity hotspots that are valuable for city planning, transportation analysis, and commercial site selection.</div>
+        <!-- Images -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px;">
+          <img src="../assets/images/3.1.png" class="project-image" style="max-width: 70%;">
+          <img src="../assets/images/3.2.png" class="project-image" style="max-width: 70%;">
         </div>
       </div>
 
-    <div id="footer">
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/syedab17/">
-        <image src="../assets/icons/linkedin.png" class="footer-icon"/>
-      </a>
+      <!-- Project Details Card -->
+      <div class="project-card" style="max-width: 100%; margin: 40px;">
+        <div class="project-card-text-container">
+          <div class="subheader-text project-title">Project Details</div>
+          <div class="body-text project-card-text" style="text-align: justify;">
+            This project leverages mobility data to identify and visualize the most frequently visited locations 
+            in Helsinki. By analyzing spatial patterns of human movement, the application helps uncover urban 
+            activity hotspots that are valuable for city planning, transportation analysis, and commercial site selection.
+          </div>
+        </div>
+      </div>
+
     </div>
 
-	</body>
+    <!-- FOOTER -->
+    <footer id="site-footer">
+      <div class="footer-container">
+
+        <!-- Left: Brand -->
+        <div class="footer-brand">
+          <h2>Contour & Code</h2>
+          <p class="footer-tagline">Mapping insights from Earth data</p>
+        </div>
+
+        <!-- Right: Contact -->
+        <div class="footer-contact">
+          <h2>CONTACT</h2>
+          <p><a href="mailto:syednova7@gmail.com">Email: syednova7@gmail.com</a></p>
+          <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/syedab17/" target="_blank">
+              <img src="../assets/icons/linkedin.png" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom strip -->
+      <div class="footer-bottom">
+        <p>© 2025 Syed Peerzada | Mapping the world, one insight at a time.</p>
+      </div>
+    </footer>
+
+    <!-- Image Modal -->
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+  </body>
 </html>

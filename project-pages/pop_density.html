@@ -1,53 +1,113 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-     <link rel="icon" href="../assets/images/5.1.png" />
-     <title>My GIS Journey</title>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../assets/images/5.1.png" />
+    <title>Contour & Code | Syed Peerzada</title>
     <meta name="description" content="A GIS portfolio made by Syed Peerzada.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
 
-		<script defer src="../js/script.js"></script>
-	</head>
-	<body>
-    <div  class="navbar fixed-navbar">
+    <script defer src="../js/script.js"></script>
+
+    <style>
+      .project-image {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        border-radius: 12px;
+      }
+
+      .project-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(46, 125, 50, 0.3);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar fixed-navbar">
       <a class="nav-title-link" href="../index.html">
         <span class="nav-title">Contour & Code | Syed Peerzada</span>
-        <a class="button" href="mailto:syednova7@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
+      </a>
+      <a class="button" href="#site-footer">
+        <span class="button-text">Contact Me</span>
+        <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon">
       </a>
     </div>
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
 
-      <!-- PROJECT HEADER -->
-      <div id="project-header">
-        <div class="main-title">Population Density of Pakistan</div>
-        <div class="body-text">A 3D Geospatial Visualization of Demographic Concentration.</div>
-        <image class="project-header-image" src="../assets/images/5.1.png">
-      </div>
-      <div id="project-details">
-        <div class="subheader-text">Project Details</div>
-        <div class="project-details-content">
-          <div class="body-text" style="text-align: justify;">In this project I worked to create a 3D visualization of Pakistan’s population density, 
-            highlighting spatial demographic patterns. Created using advanced cartographic design techniques, the map visualizes the population distribution across Pakistan. The national average population density stands at approximately 312 inhabitants per km².
-Population is heavily concentrated in the Indus River basin, stretching from Karachi through Multan, Lahore, and up to Islamabad.
-Urban centers like Karachi and Lahore exhibit the highest vertical peaks in the 3D density model.</div>
+      <!-- Project Header Card -->
+      <div class="project-card" style="max-width: 100%; margin: 140px 40px 40px 40px;">
+        <div class="project-card-text-container" style="text-align: center;">
+          <div class="subheader-text project-title">Population Density of Pakistan</div>
+          <div class="body-text project-card-text">
+            A 3D Geospatial Visualization of Demographic Concentration
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div style="display: flex; justify-content: center; padding: 20px;">
+          <img src="../assets/images/5.1.png" class="project-image" style="max-width: 70%;">
         </div>
       </div>
-</div>
-    <div id="footer">
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/syedab17/">
-        <image src="../assets/icons/linkedin.png" class="footer-icon"/>
-      </a>
+
+      <!-- Project Details Card -->
+      <div class="project-card" style="max-width: 100%; margin: 40px;">
+        <div class="project-card-text-container">
+          <div class="subheader-text project-title">Project Details</div>
+          <div class="body-text project-card-text" style="text-align: justify;">
+            In this project I worked to create a 3D visualization of Pakistan’s population density, 
+            highlighting spatial demographic patterns. Created using advanced cartographic design techniques, 
+            the map visualizes the population distribution across Pakistan. The national average population 
+            density stands at approximately 312 inhabitants per km². Population is heavily concentrated in the 
+            Indus River basin, stretching from Karachi through Multan, Lahore, and up to Islamabad. Urban centers 
+            like Karachi and Lahore exhibit the highest vertical peaks in the 3D density model.
+          </div>
+        </div>
+      </div>
+
     </div>
 
-	</body>
+    <!-- FOOTER -->
+    <footer id="site-footer">
+      <div class="footer-container">
+
+        <!-- Left: Brand -->
+        <div class="footer-brand">
+          <h2>Contour & Code</h2>
+          <p class="footer-tagline">Mapping insights from Earth data</p>
+        </div>
+
+        <!-- Right: Contact -->
+        <div class="footer-contact">
+          <h2>CONTACT</h2>
+          <p><a href="mailto:syednova7@gmail.com">Email: syednova7@gmail.com</a></p>
+          <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/syedab17/" target="_blank">
+              <img src="../assets/icons/linkedin.png" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom strip -->
+      <div class="footer-bottom">
+        <p>© 2025 Syed Peerzada | Mapping the world, one insight at a time.</p>
+      </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+  </body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../assets/images/4.1.png" />
+  <title>Contour & Code | Syed Peerzada</title>
+  <meta name="description" content="A GIS portfolio made by Syed Peerzada.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar fixed-navbar">
+    <a class="nav-title-link" href="../index.html">
+      <span class="nav-title">Contour & Code | Syed Peerzada</span>
+    </a>
+    <a class="button" href="#site-footer">
+      <span class="button-text">Contact Me</span>
+      <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon">
+    </a>
+  </div>
+
+  <!-- MAIN PAGE CONTENT -->
+  <div id="main-content">
+
+    <!-- Project Header Card -->
+    <div class="project-card" style="max-width: 100%; margin: 140px 40px 40px 40px;">
+      <div class="project-card-text-container" style="text-align: center;">
+        <div class="subheader-text project-title">Flood Extent Mapping & Monitoring</div>
+        <div class="body-text project-card-text">
+          Leveraging remote sensing for flood extent detection using SAR and MODIS
+        </div>
+      </div>
+
+      <!-- Image Grid inside card -->
+      <div class="project-image-grid" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; padding: 20px;">
+        <img src="../assets/images/flood.gif" class="project-image" style="max-width: 45%; border-radius: 12px;">
+        <img src="../assets/images/Modis.png" class="project-image" style="max-width: 45%; border-radius: 12px;">
+      </div>
+    </div>
+
+    <!-- Project Details Card -->
+    <div class="project-card" style="max-width: 100%; margin: 40px 40px 40px 40px;">
+      <div class="project-card-text-container">
+        <div class="subheader-text project-title">Project Details</div>
+        <div class="body-text project-card-text" style="text-align: justify;">
+          In this project, I explored different tools and methods for flood extent detection using the recent flood devastation in Pakistan as my case study. I focused on two approaches: SAR and MODIS.
+          For the SAR analysis, I worked with Sentinel-1 imagery in both Google Earth Engine and Python. Using thresholding and change detection techniques, I was able to map flood extent, taking advantage of SAR’s ability to see through clouds and capture water dynamics during extreme weather.
+        </div>
+        <div class="body-text project-card-text" style="text-align: justify;">
+          To complement this, I also explored MODIS imagery through NASA Worldview, which provided a broader temporal perspective and valuable visual context, despite its limitations under cloud cover. Through this study, I learned how combining radar and optical based approaches can give a more complete picture of flood events, and how open-source satellite data and platforms can support rapid flood mapping for disaster response.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="footer-container">
+
+      <!-- Left: Brand -->
+      <div class="footer-brand">
+        <h2>Contour & Code</h2>
+        <p class="footer-tagline">Mapping insights from Earth data</p>
+      </div>
+
+      <!-- Right: Contact -->
+      <div class="footer-contact">
+        <h2>CONTACT</h2>
+        <p><a href="mailto:syednova7@gmail.com">Email: syednova7@gmail.com</a></p>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/syedab17/" target="_blank">
+            <img src="../assets/icons/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="footer-bottom">
+      <p>© 2025 Syed Peerzada | Mapping the world, one insight at a time.</p>
+    </div>
+  </footer>
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+</body>
+</html>

@@ -2,61 +2,24 @@
   box-sizing: border-box;
 }
 
-html {
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-}
-
-body {
+html, body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  scroll-behavior: smooth;
 }
-
-
-
 
 /* Main Page Layout */
 
-#main-content {
-  margin: 225px 425px;
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
+
+/* Button remains same but overlay adjustments */
+.button {
+  align-self: start;
 }
-
-
-
-
-/* Portfolio Header */
-
-#portfolio-header {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+#main-content > #portfolio {
+  margin: 0;
 }
-
-#portfolio-header-image-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-basis: 50%;
-}
-
-.portfolio-header-image {
-  width: 100%;
-  height: auto;
-}
-
-#portfolio-header-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
-  flex-basis: 50%;
-}
-
 
 
 
@@ -64,17 +27,20 @@ body {
 
 #about-section {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center; /* center the box horizontally */
+  padding: 60px 0px;      /* space around the section */
 }
 
-.about-section-content {
+.about-section-box {
+  background-color: #f9f9f9; /* light background for contrast */
+  border: 5px solid; /* thicker border */
+  border-image: linear-gradient(135deg, #2E7D32, #FFC107) 1; /* forest green → honey */
+  padding: 40px 30px;
+  max-width: 1000px; /* keep box readable on large screens */
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.671); /* subtle green shadow */
 }
-
-
 
 
 /* Project Section */
@@ -83,6 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
 }
 
 .projects-container {
@@ -132,86 +99,117 @@ body {
 
 /* Project Pages */
 
-#project-header {
+#my-work-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
 }
 
-.project-header-image {
+#my-work-section .subheader-text {
+  font-size: 1.40rem;
+  font-weight: 700;
+  color: #2E7D32; /* forest green heading */
+  border-bottom: 4px solid #FFC107; /* honey underline */
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Projects grid */
+.projects-container {
+  display: flex;
+  gap: 24px 16px;       /* smaller gap between cards */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Project Cards */
+.project-card {
+  background: #fff;
+  border: 3px solid transparent;   /* slightly thinner border */
+  border-radius: 14px;             /* slightly smaller radius */
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(135deg, #2E7D32, #FFC107); /* gradient border */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.1); /* lighter shadow */
+  max-width: 300px;               /* smaller card width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);      /* smaller lift */
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.2);
+}
+
+/* Project Image */
+.project-image {
   width: 100%;
-  height: auto;
+  height: 180px;                   /* smaller height */
+  object-fit: contain;
+  object-position: center;
+  border-bottom: 2px solid #2E7D32;
 }
 
-#project-details {
+/* Card Content */
+.project-card-text-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;                        /* smaller gap */
+  padding: 4px;                    /* less padding */
+  text-align: left;
 }
 
-.project-details-content {
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
+.project-title {
+  font-size: 18px;              /* smaller heading */
+  font-weight: 600;
+  color: #2E7D32;
 }
 
-    /* Project Gallery */
+.project-card-text {
+  font-size: 2rem;              /* smaller body text */
+  color: #444;
+  line-height: 1.4;                /* tighter line height */
+}
 
-    #project-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .project-gallery-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 34px 16px;
-    }
-
-    .gallery-image-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .gallery-image-container.half-width {
-      width: calc((100% - 16px) / 2);
-    }
-
-    .gallery-image {
-      width: 100%;
-      height: auto;
-    }
-
-
+/* Button inside cards */
+.project-card .button {
+  margin: 0 16px 16px;             /* smaller margin */
+  align-self: flex-start;
+  padding: 10px 20px;              /* slightly smaller button */
+  font-size: 14px;
+}
 
 /* Extra Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1600px) {
   #main-content {
-    margin: 225px 275px;
+    margin: 70px 0px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1200px) {
   #main-content {
-    margin: 225px 175px;
+    margin: 70px 0px;
   }
 }
 
 /* Large devices (laptops/desktops, 1000px and below) */
 @media only screen and (max-width: 1000px) {
   #main-content {
-    margin: 225px 75px;
+    margin: 70px 0px;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 800px and below) */
 @media only screen and (max-width: 800px) {
   #main-content {
-    margin: 150px 50px;
+    margin: 70px 0px;
   }
 
   #portfolio-header {
@@ -226,7 +224,7 @@ body {
 /* Small devices (portrait tablets and large phones, 600px and below) */
 @media only screen and (max-width: 600px) {
   #main-content {
-    margin: 125px 20px;
+    margin: 90px 0px;
   }
 
   .project-card {
@@ -236,3 +234,359 @@ body {
 
 
 
+/* Footer */
+#site-footer {
+  background: linear-gradient(135deg, #2E7D32, #FFC107); /* forest → honey */
+  color: #fff;
+  padding: 50px 60px 20px;
+  position: relative;
+  margin-top: 80px;
+}
+
+/* Container layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 30px;
+}
+
+/* Left side brand */
+.footer-brand h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  justify-content: center; /* center buttons in footer */
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer-links .button {
+  text-decoration: none; /* remove underline */
+}
+
+
+/* Right side contact */
+.footer-contact{
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  padding: 8px 12px;             
+  border-left: 2px solid #FFC107;      
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+.footer-contact p {
+  margin: 0;                       /* remove default margin */
+  padding: 12px 16px;              /* spacing inside box */
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.05); /* subtle background over footer gradient */
+  border: 2px solid #FFC107;      /* honey border */
+  border-radius: 10px;             /* rounded corners */
+  color: #fff;                     /* text color */
+  display: inline-block;           /* shrink to content width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the email box */
+.footer-contact p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 192, 0, 0.3); /* subtle honey glow */
+}
+
+/* Style the anchor inside the paragraph */
+.footer-contact p a {
+  color: #06550b;                  /* honey color for link */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-contact p a:hover {
+  color: #fff;                     /* invert color on hover */
+  text-decoration: underline;
+}
+
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* make icons white */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1);
+}
+
+/* Bottom strip */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+}
+
+
+#portfolio-banner {
+  position: relative;
+  width: 100vw;
+  height: 500px; /* adjust for hero size */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Banner Image */
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(1);
+}
+
+/* Overlay Content Box */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 30px 40px;
+  background: linear-gradient(135deg, rgba(46,125,50,0.70), rgba(255, 191, 0, 0.70)); /* forest → honey */
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.1);
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Banner Text */
+.banner-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.banner-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffffcc;
+}
+
+/* Banner Button */
+.banner-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.banner-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* Lightbox (image zoom) */
+.lightbox {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85); /* dark background */
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  color: #f1f1f1;
+}
+.project-image {
+  cursor: pointer; /* show hand icon on hover */
+  transition: transform 0.2s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02); /* subtle zoom effect */
+}
+
+
+      /* Preloader Styles */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff; /* background color while loading */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .spinner {
+        border: 6px solid #f3f3f3;
+        border-top: 6px solid #2e7d32; /* green accent */
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Fade-out animation */
+      .fade-out {
+        animation: fadeOut 0.8s forwards;
+      }
+
+      @keyframes fadeOut {
+        to { opacity: 0; visibility: hidden; }
+      }
+
+
+  /* Skills Section */
+#skills-section {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 2px; /* for the gradient border */
+  border-color: #1b3d2f;
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(135deg, #2E7D32, #FFC107) 1; /* forest green → honey */
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.25);
+}
+
+.skills-container {
+  border-color: #1b3d2f;
+  border-width: 5px;
+}
+
+.skills-grid {
+  background: #ffffff; /* inner clean background */
+  border-radius: 14px;
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Individual skill boxes */
+.skill-box {
+  background: linear-gradient(135deg, #1b3d2f, #2e5b47);
+  color: #e6a700;
+  border: 2px solid #e6a700;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 180px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.15);
+}
+#lat-grid {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  pointer-events: none; /* lets you interact with page content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lat-line {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 0.50rem;
+  color: rgba(46, 125, 50, 0.7); /* forest green, slightly transparent */
+  border-top: 1px solid rgba(46, 125, 50, 0.3); /* horizontal grid line */
+}
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #2E7D32, #FBC02D); /* Forest to Honey */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 9999;
+}
+
+#back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+#back-to-top img {
+  width: 24px;
+  height: 24px;
+}

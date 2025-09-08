@@ -14,81 +14,127 @@
 		<script defer src="./js/script.js"></script>
 	</head>
 	<body>
-    <!-- NAVBAR -->
-    <div class="navbar fixed-navbar">
-      <a class="nav-title-link" href="./index.html">
-        <span class="nav-title">Contour & Code | Syed Peerzada</span>
-      </a>
-      <a class="button" href="mailto:syednova7@gmail.com">
-        <span class="button-text">Contact Me</span>
-        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon">
-      </a>
+     <div id="preloader">
+      <div class="spinner"></div>
     </div>
+    <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-title">Contour & Code | Syed Peerzada</span>
+    </a>
+    <a class="button" href="#site-footer">
+      <span class="button-text">Contact Me</span>
+      <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon">
+    </a>
+  </div>
+<!-- Add this inside your body, outside main content -->
+<div id="lat-grid">
+  <div class="lat-line" style="top: 10%;">180°N</div>
+  <div class="lat-line" style="top: 20%;">170°N</div>
+  <div class="lat-line" style="top: 30%;">160°N</div>
+  <div class="lat-line" style="top: 40%;">150°N</div>
+  <div class="lat-line" style="top: 50%;">140°N</div>
+  <div class="lat-line" style="top: 60%;">130°N</div>
+  <div class="lat-line" style="top: 70%;">120°N</div>
+  <div class="lat-line" style="top: 80%;">110°N</div>
+  <div class="lat-line" style="top: 90%;">100°N</div>
+  <div class="lat-line" style="top: 0%;">90°N</div>
+  <div class="lat-line" style="top: 10%;">80°N</div>
+  <div class="lat-line" style="top: 20%;">70°N</div>
+  <div class="lat-line" style="top: 30%;">60°N</div>
+  <div class="lat-line" style="top: 40%;">50°N</div>
+  <div class="lat-line" style="top: 50%;">40°N</div>
+  <div class="lat-line" style="top: 60%;">30°N</div>
+  <div class="lat-line" style="top: 70%;">20°N</div>
+  <div class="lat-line" style="top: 80%;">10°N</div>
+  <div class="lat-line" style="top: 90%;">0°</div>
+</div>
 
+  
     <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
+<div id="main-content">
+  <section id="portfolio-banner">
+    <!-- Banner Image -->
+    <img src="./assets/images/Layout.jpg" alt="River Map Banner" class="banner-image">
 
-      <!-- PORTFOLIO HEADER -->
-      <div id="portfolio-header">
-        <div id="portfolio-header-image-container">
-          <!-- 
-            TODO
+    <!-- Overlay Content -->
+    <div class="banner-content">
+      <h1 class="banner-title">Hi! I am Syed Peerzada</h1>
+      <p class="banner-subtitle">
+        Turning spatial data into actionable insights with GIS and Remote Sensing.
+      </p>
+      
+      <!-- Banner Buttons -->
+      <div class="banner-buttons">
+        <a href="#my-work-section" class="button banner-button">
+          My Projects
+          <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" />
+        </a>
+        <a href="#about-section" class="button banner-button">
+          About Me
+          <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" />
+        </a>
+        <a href="#skills-section" class="button banner-button">
+          Skills
+          <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" />
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
 
-            - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
-            - Change the number to point to your Unemployable & replace the OpenSea link with your own
-            - If you aren't using an Unemployable as your image, remove the entire "a" element
-          -->
-          <img src="./assets/images/profile_picture.jpg" class="portfolio-header-image" style="width: 350px; height: 350px; border-radius: 50%; object-fit: cover; border: 2px solid #e4cfcf;">
-
-          </a>
-        </div>
-
-          <!-- 
-            TODO
-
-            - Change the main-title to whatver you want
-            - Change the body-text after that to a quick introduction to what you do
-            - Edit the button text if you feel like it. It will link to the projects section below.
-          -->
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hi!</span>
-              <div class="body-text">My name is Syed Peerzada. I build powerful insights from Earth data using GIS and remote sensing.</div>
-            </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
+      <!-- Skills Section -->
+    <div id="skills-section">
+      <span class="subheader-text-about-me" style="padding-top: 20px;">Skills</span>
+      <div class="skills-container">
+        <div class="skills-grid">
+          <div class="skill-box">GIS & Cartography</div>
+          <div class="skill-box">Remote Sensing</div>
+          <div class="skill-box">Python (GeoPandas, Rasterio)</div>
+          <div class="skill-box">Google Earth Engine</div>
+          <div class="skill-box">Machine Learning</div>
+          <div class="skill-box">ArcGIS Pro</div>
+          <div class="skill-box">QGIS</div>
+          <div class="skill-box">SQL</div>
+          <div class="skill-box">Docker</div>
+          <div class="skill-box">Git & GitHub</div>
+          <div class="skill-box">Laser Scan Data Processing</div>
         </div>
       </div>
-
-      <!-- ABOUT SECTION -->
-      <!-- 
-        TODO
-
-        - Change the subheader-text to whatever header you want
-        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
-      -->
+    </div>
       <div id="about-section">
-        <span class="subheader-text">About Me</span>
-        <div class="about-section-content">
-          <div style="text-align: justify;" class="body-text">I am currently pursuing my Master's in Geoinformatics from Aalto University with a focus on GIS, remote sensing, and spatial data science. I have a strong foundation in tools like Google Earth Engine, ArcGIS Pro, QGIS, Python, and GeoPandas. I like turning spatial data into actionable insights and compelling visualizations. Whether it's creating automated scripts for satellite image processing or building interactive maps, I aim to make geospatial data accessible, impactful, and meaningful.</div>
-          <div style="text-align: justify;" class="body-text">I am currently open to opportunities in GIS, remote sensing, or geospatial analysis. If you're working on innovative projects involving Earth observation, sustainability, 
-            or spatial modeling, I would love to connect and contribute.</div>
+        <div class="about-section-box">
+          <span class="subheader-text-about-me">About Me</span>
+          <div class="about-section-content">
+            <div class="body-text">
+              I am currently pursuing my Master's in Geoinformatics at Aalto University with a focus on remote sensing, Earth observation, and spatial data science. My expertise lies in working with satellite imagery and geospatial datasets to extract meaningful insights for environmental monitoring and sustainable development.
+            </div>
+              <div class="body-text">
+              I have hands-on experience with tools such as Google Earth Engine, Python (GeoPandas, raster/ML libraries), ArcGIS Pro, and QGIS. I enjoy developing automated workflows for satellite image processing, applying machine learning to remote sensing data, and creating visualizations that make complex phenomena more understandable and impactful. I am currently open to opportunities in remote sensing, Earth observation applications, and geospatial analysis. If you’re working on innovative projects involving climate, disaster response, or sustainable land use, I’d be excited to connect and contribute.
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- PROJECTS / MY WORK SECTION -->
       <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
         <span class="subheader-text">My Projects</span>
 
         <div class="projects-container">
           <div class="project-card">
+            <img src="./assets/images/flood.gif" class="project-image"> 
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">Flood Monitoring</div>
+              <div class="body-text project-card-text"> Asessing flood extent using SAR</div>
+            </div>
+            <a class="button" href="project-pages/flood.html">
+	      <span class="button-text">Read More</span>
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+	    </a>
+          </div>
+          <div class="project-card">
             <img src="./assets/images/1.2.jpg" class="project-image"> 
             <div class="project-card-text-container">
               <div class="subheader-text project-title">Find the Route</div>
-              <div class="body-text project-card-text"> A routing application for Helsinki.</div>
+              <div class="body-text project-card-text"> A routing application for Helsinki</div>
             </div>
             <a class="button" href="project-pages/access_viz.html">
 	      <span class="button-text">Read More</span>
@@ -99,7 +145,7 @@
               <img src="./assets/images/4.1.png" class="project-image">
               <div class="project-card-text-container">
                 <div class="subheader-text project-title">Site Suitability Analysis</div>
-                <div class="body-text project-card-text">EV charging stations site selection.</div>
+                <div class="body-text project-card-text">EV charging stations site selection</div>
               </div>
               <a class="button" href="project-pages/ev.html">
                 <span class="button-text">Read More</span>
@@ -110,7 +156,7 @@
             <img src="./assets/images/2.1.jpg" class="project-image">
             <div class="project-card-text-container">
               <div class="subheader-text project-title">Remote Sesning</div>
-              <div class="body-text project-card-text">Studying the Remote Sensing Indices Using Sentinel Imagery.</div>
+              <div class="body-text project-card-text">Remote Sensing Indices</div>
             </div>
             <a class="button" href="project-pages/sentinelhub.html">
               <span class="button-text">Read More</span>
@@ -121,7 +167,7 @@
             <img src="./assets/images/3.1.png" class="project-image">
             <div class="project-card-text-container">
               <div class="subheader-text project-title">Popular Destinations</div>
-              <div class="body-text project-card-text">Uncovering Mobility Data Insights.</div>
+              <div class="body-text project-card-text">Uncovering Mobility Data Insights</div>
             </div>
             <a class="button" href="project-pages/mobility_data.html">
               <span class="button-text">Read More</span>
@@ -133,7 +179,7 @@
               <img src="./assets/images/5.1.png" class="project-image">
               <div class="project-card-text-container">
                 <div class="subheader-text project-title">Population Density</div>
-                <div class="body-text project-card-text">Project Built to Study Population Spatial Patterns.</div>
+                <div class="body-text project-card-text">Uncovering Population Spatial Patterns.</div>
               </div>
               <a class="button" href="project-pages/pop_density.html">
                 <span class="button-text">Read More</span>
@@ -144,12 +190,50 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <div id="footer">
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/syedab17/">
-        <image src="./assets/icons/linkedin.png" class="footer-icon"/>
-      </a>
+
+
+
+    <!-- Footer -->
+<footer id="site-footer">
+  <div class="footer-container">
+
+    <!-- Left: Brand -->
+    <div class="footer-brand">
+      <h2>Contour & Code</h2>
+      <p class="footer-tagline">Mapping insights from Earth data</p>
     </div>
+
+    <!-- Center: Links -->
+  <div class="footer-links">
+    <a href="#about-section" class="button">About</a>
+    <a href="#my-work-section" class="button">Projects</a>
+  </div>
+    <!-- Right: Contact -->
+    <div class="footer-contact">
+      <h2>CONTACT</h2>
+      <p><a href="mailto:syednova7@gmail.com">Email: syednova7@gmail.com</a></p>
+      <div class="footer-icons">
+        <a href="https://www.linkedin.com/in/syedab17/" target="_blank">
+          <img src="./assets/icons/linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+  <!-- Bottom strip -->
+  <div class="footer-bottom">
+    <p>© 2025 Syed Peerzada | Mapping the world, one insight at a time.</p>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" title="Back to top">
+  <img src="./assets/icons/north-arrow.png" alt="Back to top" />
+</button>
 
 	</body>
 </html>
